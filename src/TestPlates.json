@@ -1,0 +1,62 @@
+[
+  {
+    "order": "70001",
+    "color": "yellow",
+    "formPosition": {
+      "x": "30",
+      "y": "32"
+    },
+    "formSize": {
+      "width": "250",
+      "height": "330"
+    }
+  },
+  {
+    "order": "70002",
+    "color": "cyan",
+    "formPosition": {
+      "x": "260",
+      "y": "10"
+    },
+    "formSize": {
+      "width": "350",
+      "height": "450"
+    }
+  },
+  {
+    "order": "70003",
+    "color": "magenta",
+    "formPosition": {
+      "x": "10",
+      "y": "460"
+    },
+    "formSize": {
+      "width": "150",
+      "height": "450"
+    }
+  },
+  {
+    "order": "70003",
+    "color": "black",
+    "formPosition": {
+      "x": "160",
+      "y": "460"
+    },
+    "formSize": {
+      "width": "150",
+      "height": "450"
+    }
+  },
+  {
+    "order": "70004",
+    "color": "black",
+    "formPosition": {
+      "x": "310",
+      "y": "460"
+    },
+    "formSize": {
+      "width": "250",
+      "height": "450"
+    }
+  }
+]

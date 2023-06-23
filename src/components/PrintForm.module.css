@@ -1,0 +1,14 @@
+.printForm {
+  position: absolute;
+  display: flex;
+  background-color: var(--form-bg-color);
+  border: 1px dotted white;
+  align-items: center;
+  justify-content: center;
+  transition: width 250ms height 250ms left 250ms top 250ms;
+}
+
+.printFormLabel {
+  color: rgb(20, 20, 20);
+  user-select: none;
+}

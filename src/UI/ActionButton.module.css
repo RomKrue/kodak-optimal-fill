@@ -1,0 +1,18 @@
+.actionButton {
+  display: flex;
+  height: 3rem;
+  padding: 0 1rem;
+  align-items: center;
+  justify-content: center;
+  border-radius: 1.5rem;
+  background-color: rgb(130, 210, 140);
+  transition: all 250ms;
+  margin-right: 0.5rem;
+  border: none;
+  font-size: 1.2rem;
+  color: white;
+}
+
+.actionButton:hover {
+  background-color: rgb(110, 190, 120);
+}
