@@ -33,7 +33,7 @@ function Plate({ data }) {
         <ActionButtonMedium
           title="Заблокировать пластину"
           action={() => {
-            console.log('LOCK')
+            console.log('Заблокировать пластину')
           }}
         >
           <BiLockAlt />
