@@ -10,7 +10,7 @@ import ActionButtonMedium from '../UI/ActionButtonMedium'
 
 import { BiLockAlt, BiLockOpenAlt } from 'react-icons/bi'
 
-function Plate({ data }) {
+function Plate({ data, largeView }) {
   const plateSize = { width: 1067, height: 800 }
 
   const plateScale = useSelector(plateScaleSelector.getPlateScale)
@@ -29,16 +29,18 @@ function Plate({ data }) {
       ))}
 
       <div className={styles.lockerScreen} />
-      <div className={styles.controlsSection}>
-        <ActionButtonMedium
-          title="Заблокировать пластину"
-          action={() => {
-            console.log('Заблокировать пластину')
-          }}
-        >
-          <BiLockAlt />
-        </ActionButtonMedium>
-      </div>
+      {largeView && (
+        <div className={styles.controlsSection}>
+          <ActionButtonMedium
+            title="Заблокировать пластину"
+            action={() => {
+              console.log('Заблокировать пластину')
+            }}
+          >
+            <BiLockAlt />
+          </ActionButtonMedium>
+        </div>
+      )}
     </div>
   )
 }

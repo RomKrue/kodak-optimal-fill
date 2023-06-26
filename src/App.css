@@ -1,6 +1,8 @@
 .App {
   text-align: center;
   font-family: 'Arial Narrow';
+
+  min-height: 100vh;
 }
 
 .plateWrapper {

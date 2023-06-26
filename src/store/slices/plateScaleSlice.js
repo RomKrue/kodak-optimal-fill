@@ -1,7 +1,7 @@
 import { createSlice } from '@reduxjs/toolkit'
 
 const initialState = {
-  plateScale: 1,
+  plateScale: JSON.parse(localStorage.getItem('plateScale')) || 0.5,
 }
 
 const plateScaleSlice = createSlice({
@@ -10,6 +10,11 @@ const plateScaleSlice = createSlice({
   reducers: {
     zoomPlate: (state, action) => {
       state.plateScale += action.payload
+      localStorage.setItem('plateScale', JSON.stringify(state.plateScale))
+    },
+
+    setPlateScale: (state, action) => {
+      state.plateScale = action.payload
     },
   },
 })
@@ -18,5 +23,5 @@ export const plateScaleSelector = {
   getPlateScale: (state) => state.plateScale,
 }
 
-export const { zoomPlate } = plateScaleSlice.actions
+export const { zoomPlate, resetPlateScale } = plateScaleSlice.actions
 export default plateScaleSlice.reducer
