@@ -5,13 +5,13 @@ import { BiZoomIn, BiZoomOut, BiExpand, BiDownload } from 'react-icons/bi'
 
 import { useDispatch } from 'react-redux'
 import { zoomPlate } from '../store/slices/plateScaleSlice'
-import { updateFormsRawData } from '../store/slices/printFormsDataSlice'
+import { updateRawPrintForms } from '../store/slices/printFormsSlice'
 
 function Header() {
   const dispatch = useDispatch()
 
   const getFormsRawData = () => {
-    dispatch(updateFormsRawData())
+    dispatch(updateRawPrintForms())
   }
 
   const zoomInAction = () => {
