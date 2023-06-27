@@ -16,31 +16,34 @@ function Plate({ data, largeView }) {
   const plateScale = useSelector(plateScaleSelector.getPlateScale)
 
   return (
-    <div
-      className={styles.Plate}
-      style={{
-        width: `${plateSize.width * plateScale}px`,
-        height: `${plateSize.height * plateScale}px`,
-      }}
-    >
-      <PlateWorkArea />
-      {data.map((form) => (
-        <PrintForm key={nanoid(3)} props={form} plateScale={plateScale} />
-      ))}
+    <div className={styles.plateWrapper}>
+      <div
+        className={styles.Plate}
+        style={{
+          width: `${plateSize.width}px`,
+          height: `${plateSize.height}px`,
+          scale: `${plateScale}`,
+        }}
+      >
+        <PlateWorkArea />
+        {data.map((form) => (
+          <PrintForm key={nanoid(3)} {...form} />
+        ))}
 
-      <div className={styles.lockerScreen} />
-      {largeView && (
-        <div className={styles.controlsSection}>
-          <ActionButtonMedium
-            title="Заблокировать пластину"
-            action={() => {
-              console.log('Заблокировать пластину')
-            }}
-          >
-            <BiLockAlt />
-          </ActionButtonMedium>
-        </div>
-      )}
+        <div className={styles.lockerScreen} />
+        {largeView && (
+          <div className={styles.controlsSection}>
+            <ActionButtonMedium
+              title="Заблокировать пластину"
+              action={() => {
+                console.log('Заблокировать пластину')
+              }}
+            >
+              <BiLockAlt />
+            </ActionButtonMedium>
+          </div>
+        )}
+      </div>
     </div>
   )
 }

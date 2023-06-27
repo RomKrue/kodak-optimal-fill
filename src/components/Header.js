@@ -7,7 +7,7 @@ import { useDispatch } from 'react-redux'
 import { zoomPlate } from '../store/slices/plateScaleSlice'
 import { updateFormsRawData } from '../store/slices/printFormsDataSlice'
 
-function Header(props) {
+function Header() {
   const dispatch = useDispatch()
 
   const getFormsRawData = () => {

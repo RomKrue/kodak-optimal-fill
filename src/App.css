@@ -4,9 +4,3 @@
 
   min-height: 100vh;
 }
-
-.plateWrapper {
-  display: flex;
-  align-items: center;
-  justify-content: center;
-}

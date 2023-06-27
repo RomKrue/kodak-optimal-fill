@@ -2,18 +2,15 @@ import { createSlice } from '@reduxjs/toolkit'
 
 import formsFromServer from '../../formsFromServer.json'
 
-const initialState = {
-  formsRawData: [],
-}
+const formsRawData = formsFromServer
 
 const printFormsDataSlice = createSlice({
   name: 'printFormsData',
-  initialState,
+  initialState: {
+    formsRawData,
+  },
   reducers: {
-    updateFormsRawData(state) {
-      state.formsRawData = formsFromServer
-      console.log(state.formsRawData)
-    },
+    updateFormsRawData(state) {},
   },
 })
 

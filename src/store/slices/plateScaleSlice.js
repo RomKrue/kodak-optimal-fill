@@ -15,6 +15,7 @@ const plateScaleSlice = createSlice({
 
     setPlateScale: (state, action) => {
       state.plateScale = action.payload
+      localStorage.setItem('plateScale', JSON.stringify(state.plateScale))
     },
   },
 })
