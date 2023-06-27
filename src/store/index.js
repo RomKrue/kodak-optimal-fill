@@ -4,7 +4,7 @@ import plateScaleSlice from './slices/plateScaleSlice'
 import printFormsDataSlice from './slices/printFormsDataSlice'
 
 const store = configureStore({
-  reducer: { UI: plateScaleSlice, DATA: printFormsDataSlice },
+  reducer: { plateScale: plateScaleSlice, printFormsData: printFormsDataSlice },
 })
 
 export default store

@@ -5,8 +5,8 @@ function ScaleButton(props) {
 
   return (
     <button
-      title={title}
       className={styles.scaleButton}
+      title={title}
       onClick={() => action()}
     >
       {props.children}

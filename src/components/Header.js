@@ -5,9 +5,14 @@ import { BiZoomIn, BiZoomOut, BiExpand, BiDownload } from 'react-icons/bi'
 
 import { useDispatch } from 'react-redux'
 import { zoomPlate } from '../store/slices/plateScaleSlice'
+import { updateFormsRawData } from '../store/slices/printFormsDataSlice'
 
 function Header(props) {
   const dispatch = useDispatch()
+
+  const getFormsRawData = () => {
+    dispatch(updateFormsRawData())
+  }
 
   const zoomInAction = () => {
     dispatch(zoomPlate(0.1))
@@ -21,7 +26,7 @@ function Header(props) {
 
   return (
     <div className={styles.Header}>
-      <ActionButton title="Get data" action={() => {}}>
+      <ActionButton title="Get data" action={getFormsRawData}>
         <BiDownload />
         <span className={styles.buttonTitle}>Load data</span>
       </ActionButton>

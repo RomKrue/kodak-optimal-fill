@@ -19,10 +19,6 @@ function App() {
 
   const rawData = useSelector(formsRawDataSelector.getFormsRawData)
 
-  function showFormsRawData() {
-    console.log(rawData)
-  }
-
   // getFormsFromServer()
 
   //window.addEventListener('resize', setPlateScale()) //допилить макс и мин значение plateScale
@@ -38,12 +34,6 @@ function App() {
 
   return (
     <div className="App">
-      <button onClick={() => showFormsRawData()}>Get!</button>
-
-      {rawData.map((form) => (
-        <div key={nanoid(2)}>{form.order + '_' + form.color}</div>
-      ))}
-
       <Header />
 
       {/*

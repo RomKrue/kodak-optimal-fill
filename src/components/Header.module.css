@@ -16,7 +16,7 @@
 .ScaleButtonsWrapper {
   display: flex;
   height: 3rem;
-  background: linear-gradient(rgb(235, 235, 235), rgb(250, 250, 250));
+  background: linear-gradient(rgb(240, 240, 240), rgb(255, 255, 255));
   border-radius: 1.5rem;
   justify-content: center;
   align-items: center;
