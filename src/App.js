@@ -11,6 +11,9 @@ import formsFromServer from './formsFromServer.json'
 function App() {
   const dispatch = useDispatch()
 
+  //const remPx = window.getComputedStyle(document.getElementById('App').fontSize)
+  //console.log(remPx)
+
   const data = formsFromServer
   dispatch(updateRawPrintForms(data))
 

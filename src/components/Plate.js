@@ -4,7 +4,7 @@ import PlateWorkArea from './PlateWorkArea'
 import styles from './Plate.module.css'
 import { nanoid } from 'nanoid'
 import { useSelector } from 'react-redux'
-import { plateScaleSelector } from '../store/slices/plateScaleSlice'
+import { plateScaleSelector } from '../store/slices/uiScaleSlice'
 
 import ActionButtonMedium from '../UI/ActionButtonMedium'
 

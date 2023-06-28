@@ -8,8 +8,6 @@ function UnusedPrintFormsPreview() {
     (state) => state.printForms.unusedPrintForms
   )
 
-  console.log(unusedPrintForms)
-
   return (
     <div className={styles.UnusedPrintFormsPreview}>
       {unusedPrintForms.map((formObj) => (

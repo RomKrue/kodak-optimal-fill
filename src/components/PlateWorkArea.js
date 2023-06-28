@@ -1,7 +1,7 @@
 import styles from './PlateWorkArea.module.css'
 
 import { useSelector } from 'react-redux'
-import { plateScaleSelector } from '../store/slices/plateScaleSlice'
+import { plateScaleSelector } from '../store/slices/uiScaleSlice'
 
 function PlateWorkArea() {
   const plateScale = useSelector(plateScaleSelector.getPlateScale)
