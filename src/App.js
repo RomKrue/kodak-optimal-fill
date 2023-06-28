@@ -1,6 +1,8 @@
 import { useDispatch } from 'react-redux'
 import { updateRawPrintForms } from './store/slices/printFormsSlice'
 
+import { useRef, useEffect } from 'react'
+
 import './App.css'
 import Header from './components/Header'
 import Plate from './components/Plate'
@@ -11,8 +13,12 @@ import formsFromServer from './formsFromServer.json'
 function App() {
   const dispatch = useDispatch()
 
-  //const remPx = window.getComputedStyle(document.getElementById('App').fontSize)
-  //console.log(remPx)
+  const inputRef = useRef()
+  useEffect(() => {
+    const size = window
+      .getComputedStyle(inputRef.current, null)
+      .getPropertyValue('font-size')
+  }, [])
 
   const data = formsFromServer
   dispatch(updateRawPrintForms(data))
@@ -24,7 +30,7 @@ function App() {
 */
 
   return (
-    <div className="App">
+    <div className="App" ref={inputRef}>
       <Header />
       <UnusedPrintFormsPreview />
       {/*
