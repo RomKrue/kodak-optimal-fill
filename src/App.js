@@ -11,10 +11,14 @@ import formsFromServer from './formsFromServer.json'
 function App() {
   const dispatch = useDispatch()
 
-  function loadFormsData() {
+  const data = formsFromServer
+  dispatch(updateRawPrintForms(data))
+
+  /*  function loadFormsData() {
     const data = formsFromServer
     dispatch(updateRawPrintForms(data))
   }
+*/
 
   return (
     <div className="App">

@@ -10,9 +10,7 @@ import { updateRawPrintForms } from '../store/slices/printFormsSlice'
 function Header() {
   const dispatch = useDispatch()
 
-  const getFormsRawData = () => {
-    dispatch(updateRawPrintForms())
-  }
+  const getFormsRawData = () => {}
 
   const zoomInAction = () => {
     dispatch(zoomPlate(0.1))

@@ -1,12 +1,22 @@
-import UnusedPrintForm from './PrintForm'
+import UnusedPrintForm from './UnusedPrintForm'
 import { useSelector } from 'react-redux'
-import { nanoid } from 'nanoid'
+
+import styles from './UnusedPrintFormsPreview.module.css'
 
 function UnusedPrintFormsPreview() {
   const unusedPrintForms = useSelector(
-    (state) => state.printForms.rawPrintForms
+    (state) => state.printForms.unusedPrintForms
   )
-  return <div> </div>
+
+  console.log(unusedPrintForms)
+
+  return (
+    <div className={styles.UnusedPrintFormsPreview}>
+      {unusedPrintForms.map((formObj) => (
+        <UnusedPrintForm key={formObj.id} {...formObj} />
+      ))}
+    </div>
+  )
 }
 
 export default UnusedPrintFormsPreview
