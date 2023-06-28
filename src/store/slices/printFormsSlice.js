@@ -1,16 +1,18 @@
 import { createSlice } from '@reduxjs/toolkit'
 
-import formsFromServer from '../../formsFromServer.json'
+import rawToPrep from '../rawToPrep'
 
-const rawPrintForms = formsFromServer
+const initialState = { rawPrintForms: [], prepPrintForms: [] }
 
 const printFormsSlice = createSlice({
   name: 'printForms',
-  initialState: {
-    rawPrintForms,
-  },
+  initialState,
   reducers: {
-    updateRawPrintForms(state, action) {},
+    updateRawPrintForms(state, action) {
+      //console.log(state.rawPrintForms.length)
+      state.rawPrintForms = action.payload
+      state.prepPrintForms = rawToPrep(action.payload)
+    },
   },
 })
 

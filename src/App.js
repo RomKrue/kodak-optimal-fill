@@ -1,17 +1,25 @@
+import { useDispatch } from 'react-redux'
+import { updateRawPrintForms } from './store/slices/printFormsSlice'
+
 import './App.css'
 import Header from './components/Header'
 import Plate from './components/Plate'
 import PlatesPreviewList from './components/PlatesPreviewList'
 import UnusedPrintFormsPreview from './components/UnusedPrintFormsPreview'
-
-import { nanoid } from 'nanoid'
+import formsFromServer from './formsFromServer.json'
 
 function App() {
+  const dispatch = useDispatch()
+
+  function loadFormsData() {
+    const data = formsFromServer
+    dispatch(updateRawPrintForms(data))
+  }
+
   return (
     <div className="App">
       <Header />
       <UnusedPrintFormsPreview />
-
       {/*
       
         <Plate data={platesArr[0].forms} largeView={true} />

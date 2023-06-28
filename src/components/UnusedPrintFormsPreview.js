@@ -4,9 +4,8 @@ import { nanoid } from 'nanoid'
 
 function UnusedPrintFormsPreview() {
   const unusedPrintForms = useSelector(
-    (state) => state.printFormsData.formsRawData
+    (state) => state.printForms.rawPrintForms
   )
-
   return <div> </div>
 }
 
