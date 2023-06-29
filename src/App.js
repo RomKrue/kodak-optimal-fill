@@ -13,21 +13,18 @@ import formsFromServer from './formsFromServer.json'
 function App() {
   const dispatch = useDispatch()
 
-  const inputRef = useRef()
-  useEffect(() => {
-    const size = window
-      .getComputedStyle(inputRef.current, null)
-      .getPropertyValue('font-size')
-  }, [])
-
   const data = formsFromServer
   dispatch(updateRawPrintForms(data))
 
-  /*  function loadFormsData() {
-    const data = formsFromServer
-    dispatch(updateRawPrintForms(data))
-  }
-*/
+  const inputRef = useRef()
+
+  useEffect(() => {
+    const size = parseFloat(
+      window
+        .getComputedStyle(inputRef.current, null)
+        .getPropertyValue('font-size')
+    )
+  }, [])
 
   return (
     <div className="App" ref={inputRef}>
