@@ -4,15 +4,13 @@ import ActionButton from '../UI/ActionButton'
 import { BiZoomIn, BiZoomOut, BiExpand, BiDownload } from 'react-icons/bi'
 
 import { useDispatch } from 'react-redux'
-import { zoomPlate } from '../store/slices/plateScaleSlice'
+import { zoomPlate } from '../store/slices/uiScaleSlice'
 import { updateRawPrintForms } from '../store/slices/printFormsSlice'
 
 function Header() {
   const dispatch = useDispatch()
 
-  const getFormsRawData = () => {
-    dispatch(updateRawPrintForms())
-  }
+  const getFormsRawData = () => {}
 
   const zoomInAction = () => {
     dispatch(zoomPlate(0.1))

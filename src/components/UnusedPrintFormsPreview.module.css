@@ -1,0 +1,8 @@
+.UnusedPrintFormsPreview {
+  overflow: hidden;
+  display: flex;
+
+  height: 10rem;
+  background-color: white;
+  margin-top: 2rem;
+}

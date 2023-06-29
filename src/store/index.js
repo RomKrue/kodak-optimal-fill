@@ -1,10 +1,10 @@
 import { configureStore } from '@reduxjs/toolkit'
 
-import plateScaleSlice from './slices/plateScaleSlice'
+import uiScaleSlice from './slices/uiScaleSlice'
 import printFormsSlice from './slices/printFormsSlice'
 
 const store = configureStore({
-  reducer: { plateScale: plateScaleSlice, printForms: printFormsSlice },
+  reducer: { uiScale: uiScaleSlice, printForms: printFormsSlice },
 })
 
 export default store

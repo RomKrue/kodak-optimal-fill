@@ -4,8 +4,8 @@ const initialState = {
   plateScale: JSON.parse(localStorage.getItem('plateScale')) || 0.5,
 }
 
-const plateScaleSlice = createSlice({
-  name: 'plateScale',
+const uiScaleSlice = createSlice({
+  name: 'uiScaleSlice',
   initialState,
   reducers: {
     zoomPlate: (state, action) => {
@@ -24,5 +24,5 @@ export const plateScaleSelector = {
   getPlateScale: (state) => state.plateScale,
 }
 
-export const { zoomPlate, resetPlateScale } = plateScaleSlice.actions
-export default plateScaleSlice.reducer
+export const { zoomPlate, resetPlateScale } = uiScaleSlice.actions
+export default uiScaleSlice.reducer

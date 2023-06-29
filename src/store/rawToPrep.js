@@ -2,7 +2,7 @@ import { nanoid } from 'nanoid'
 
 function rawToPrep(raw) {
   const prepForms = []
-  raw.map((rawObj) => {
+  raw.forEach((rawObj) => {
     const prepObj = {
       id: nanoid(3),
       order: rawObj.order,
@@ -14,7 +14,6 @@ function rawToPrep(raw) {
 
     prepForms.push(prepObj)
   })
-
   return prepForms
 }
 
