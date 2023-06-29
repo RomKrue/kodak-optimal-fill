@@ -1,11 +1,8 @@
 .UnusedPrintFormsPreview {
-  width: 100%;
   overflow: hidden;
   display: flex;
-  flex-wrap: wrap;
-  align-items: center;
-  justify-content: center;
-  height: auto;
+
+  height: 10rem;
   background-color: white;
   margin-top: 2rem;
 }
