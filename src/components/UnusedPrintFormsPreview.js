@@ -9,10 +9,9 @@ function UnusedPrintFormsPreview() {
   const unusedPrintForms = useSelector(
     (state) => state.printForms.unusedPrintForms
   )
-  console.log(unusedPrintForms)
   return (
     <div className={styles.UnusedPrintFormsPreview}>
-      <div className="scrollContainer">
+      <div className={styles.scrollContainer}>
         {unusedPrintForms.map((formObj) => (
           <UnusedPrintForm key={formObj.id} {...formObj} />
         ))}

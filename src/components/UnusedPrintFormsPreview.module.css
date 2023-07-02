@@ -1,12 +1,14 @@
 .UnusedPrintFormsPreview {
+  box-sizing: border-box;
   overflow: hidden;
-  display: flex;
-
-  height: 10rem;
   background-color: white;
   margin-top: 2rem;
 }
 
 .scrollContainer {
   display: flex;
+  cursor: grab;
+  height: 8rem;
+  width: fit-content;
+  padding: 1rem;
 }

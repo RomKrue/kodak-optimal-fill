@@ -9,13 +9,13 @@ function rawToPrep(raw) {
       color: rawObj.color,
       width: rawObj.width,
       height: rawObj.height,
-      space: (rawObj.width * rawObj.height) / 100, //площадь формы в см2
+      space: Math.floor((rawObj.width * rawObj.height) / 100), //площадь формы в см2
     }
 
     prepForms.push(prepObj)
   })
 
-  prepForms.sort((a, b) => a.width - b.width)
+  prepForms.sort((a, b) => b.height - a.height)
 
   return prepForms
 }

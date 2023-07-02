@@ -1,0 +1,17 @@
+.ScrollMarker {
+  display: flex;
+  justify-content: center;
+  width: 100%;
+  height: 0.2rem;
+  background-color: rgba(125, 125, 125, 0.2);
+  border-radius: 0.1rem;
+  margin-bottom: -1rem;
+}
+
+.scrollMarker__dot {
+  display: flex;
+  position: relative;
+  height: 0.5rem;
+  min-width: 2rem;
+  background-color: rgba(125, 125, 125, 0.5);
+}
