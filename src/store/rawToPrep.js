@@ -14,6 +14,9 @@ function rawToPrep(raw) {
 
     prepForms.push(prepObj)
   })
+
+  prepForms.sort((a, b) => a.width - b.width)
+
   return prepForms
 }
 

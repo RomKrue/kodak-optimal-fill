@@ -9,7 +9,7 @@ function UnusedPrintFormsPreview() {
   const unusedPrintForms = useSelector(
     (state) => state.printForms.unusedPrintForms
   )
-
+  console.log(unusedPrintForms)
   return (
     <div className={styles.UnusedPrintFormsPreview}>
       <div className="scrollContainer">

@@ -16,11 +16,12 @@ function App() {
   const dispatch = useDispatch()
 
   const data = formsFromServer
-  dispatch(updateRawPrintForms(data))
 
   const inputRef = useRef()
 
   useEffect(() => {
+    dispatch(updateRawPrintForms(data))
+
     const size = parseFloat(
       window
         .getComputedStyle(inputRef.current, null)

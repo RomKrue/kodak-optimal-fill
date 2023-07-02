@@ -6,3 +6,7 @@
   background-color: white;
   margin-top: 2rem;
 }
+
+.scrollContainer {
+  display: flex;
+}
