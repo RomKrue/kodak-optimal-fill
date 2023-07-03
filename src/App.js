@@ -11,27 +11,24 @@ import UnusedPrintFormsPreview from './components/UnusedPrintFormsPreview'
 import formsFromServer from './formsFromServer.json'
 
 function App() {
-  console.log('App rendered')
-
   const dispatch = useDispatch()
 
   const data = formsFromServer
 
-  const inputRef = useRef()
+  const appRef = useRef()
 
   useEffect(() => {
     dispatch(updateRawPrintForms(data))
 
     const size = parseFloat(
       window
-        .getComputedStyle(inputRef.current, null)
+        .getComputedStyle(appRef.current, null)
         .getPropertyValue('font-size')
     )
-    console.log(size)
   }, [])
 
   return (
-    <div className="App" ref={inputRef}>
+    <div className="App" ref={appRef}>
       <Header />
       <UnusedPrintFormsPreview />
       {/*

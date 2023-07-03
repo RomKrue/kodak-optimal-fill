@@ -1,8 +1,7 @@
 import styles from './UnusedPrintForm.module.css'
 
 function UnusedPrintForm(props) {
-  const localScale = 0.25
-  const { id, order, color, width, height, space } = props
+  const { id, order, color, width, height, space, localScale } = props
   return (
     <div
       className={styles.UnusedPrintForm}
