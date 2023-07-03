@@ -64,5 +64,72 @@
     "color": "360",
     "width": "198",
     "height": "368"
+  },
+
+  {
+    "order": "75001",
+    "color": "Cyan",
+    "width": "250",
+    "height": "330"
+  },
+  {
+    "order": "75001",
+    "color": "Magenta",
+    "width": "250",
+    "height": "330"
+  },
+  {
+    "order": "75001",
+    "color": "Yellow",
+    "width": "250",
+    "height": "330"
+  },
+  {
+    "order": "75001",
+    "color": "Black",
+    "width": "250",
+    "height": "330"
+  },
+  {
+    "order": "75001",
+    "color": "200",
+    "width": "250",
+    "height": "330"
+  },
+  {
+    "order": "75005",
+    "color": "Black",
+    "width": "200",
+    "height": "226"
+  },
+  {
+    "order": "75006",
+    "color": "Black",
+    "width": "200",
+    "height": "226"
+  },
+  {
+    "order": "75006",
+    "color": "Black",
+    "width": "200",
+    "height": "226"
+  },
+  {
+    "order": "75008",
+    "color": "200",
+    "width": "210",
+    "height": "422"
+  },
+  {
+    "order": "75008",
+    "color": "877",
+    "width": "210",
+    "height": "422"
+  },
+  {
+    "order": "75010",
+    "color": "360",
+    "width": "198",
+    "height": "368"
   }
 ]

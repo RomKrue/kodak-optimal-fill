@@ -8,7 +8,7 @@ import ScrollMarker from '../UI/ScrollMarker'
 import styles from './UnusedPrintFormsPreview.module.css'
 
 function UnusedPrintFormsPreview() {
-  const upfHeightAsRem = 7
+  const upfHeightAsRem = 7 //высота превьюшек неиспользованных форм в единицах Rem !!!
 
   const scrollRef = useRef()
 
@@ -18,8 +18,11 @@ function UnusedPrintFormsPreview() {
 
   const remToPx = useSelector((state) => state.uiScale.remToPx)
 
-  const maxHeightToScale =
-    (remToPx * upfHeightAsRem) / unusedPrintForms[0].height
+  const maxHeightToScale = () => {
+    return unusedPrintForms.length > 0
+      ? (remToPx * upfHeightAsRem) / unusedPrintForms[0].height
+      : 1
+  }
 
   return (
     <div className={styles.UnusedPrintFormsPreview}>
@@ -28,7 +31,7 @@ function UnusedPrintFormsPreview() {
           <UnusedPrintForm
             key={formObj.id}
             {...formObj}
-            localScale={maxHeightToScale}
+            localScale={maxHeightToScale()}
           />
         ))}
       </div>
