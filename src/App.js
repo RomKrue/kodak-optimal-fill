@@ -30,6 +30,7 @@ function App() {
   return (
     <div className="App" ref={appRef}>
       <Header />
+      <section className="main-content"></section>
       <UnusedPrintFormsPreview />
       {/*
       
